@@ -75,10 +75,10 @@ knitr::knit_hooks$set(chunk = function(x, options) {
 
 # Libraries and Packages
 
-## Part a
+## Part A
 Install the `esquisse` package for `R`. Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that we don't install the package every time you compile your Quarto document. 
 
-**Solution**: blah blah blah blah blah
+**Solution**: I used the install.packages(FILLER) to install teh esquisse package. I used quotation marks as to not confuse it with an object.
 
 ```{r}
 #| size: "scriptsize"
@@ -98,7 +98,8 @@ Load the `esquisse` package for `R`. Report the code below. It does not matter w
 #| eval: false
 library("esquisse")
 ```
-## Part c
+
+## Part C
 How can you ask for help about the  `esquisse` package for `R`? Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that the help document isn't loaded every time you compile your Quarto document.
 **Solution**
 ```{r}
@@ -108,7 +109,7 @@ How can you ask for help about the  `esquisse` package for `R`? Report the code 
 help("esquisse")
 ```
 
-## Part d
+## Part D
 Is a demo or vignette available for the  `esquisse` package for `R`? Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that the you don't get errors when you compile your Quarto document.
 
 **Solution** There is no demo or vignette.
@@ -120,19 +121,21 @@ demo("esquisse")
 vignette("esquisse")
 ```
 
-## Part e
+## Part E
 Add the BibTeX citation for `esquisse` package for `R` to your `.bib` file and cite it in a sentence describing what the package does below. Note you can reference a citation named @esquisse using "[@\hspace{-0em}esquisse]".
 <!-- Note the \hspace{-0em} above is for printing 
 the command instead of actually citing. -->
 
-**Solution**  is a super cool package that I will learn to love 
+**Solution** [@esquisse] is useful for exploring and visualizing data interactively, specifically using "ggplot2" fifures. These figures allow you to drag-and-drop to map your variables to different aesthetics.
 
-## Part f
+## Part F
 Run `esquisser()` in your console -- not in a chunk of `R` code in your Quarto document. 
 
 i. Select `palmerpenguins` from the "Select an environment in which to search:" dropdown. This should automatically select `penguins` in the "Select a data.frame:" dropdown. Click "Import Data".
 ii. Drag `body_mass_g` to the X box and `species` to the fill box. 
 iii. Describe what you see in words. What can you conclude about Adelie, Chinstrap, and Gentoo penguins based on the resulting plot? 
+
+**Solution** There is a histogram that shows all three population's data. There appears to be a greater amount of data collected for the Adelle population. Each population's data is relatively symmetric and a general peak. The Adelle population has a more steep peak, while the Chinstrap and Gentoo populations are more moderately sloped. The Adelle and Chinstrap populations' body mass appear very similar, indicating that these populations have very similar masses. Alternatively, the Gentoo population is heavier on average.
 
 # Objects and Vectors
 Create the following vectors in `R`. In some cases, you may be able to use `seq()` or `rep()` while in others you cannot. Use these functions when possible, otherwise manually create the vector and explain why that was necessary.
@@ -187,6 +190,12 @@ $$F_n = F_{n-1} + F_{n-2}$$
 where $F_0=0$ and $F_1=1$. 
 
 Create a vector of the first 10 Fibonacci numbers.
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(Fibonacci.Sequence <- c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
+```
 
 ## Part b
 Triangular Numbers are the cumulative sums of natural numbers:
