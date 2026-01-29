@@ -76,21 +76,56 @@ knitr::knit_hooks$set(chunk = function(x, options) {
 # Libraries and Packages
 
 ## Part a
-Install the `esquisse` package for `R`. Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that we don't install the package every time you compile your Quarto document.
+Install the `esquisse` package for `R`. Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that we don't install the package every time you compile your Quarto document. 
 
-## Part b
+**Solution**: blah blah blah blah blah
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+#| eval: false
+install.packages("esquisse")
+```
+
+
+## Part B
 Load the `esquisse` package for `R`. Report the code below. It does not matter whether you set "\#| eval: false" because loading the package does not add a lot of time. Note you will not evaluate any code that uses the `esquisse` package, so there is no need to load it as you compile your Quarto document.
 
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+#| eval: false
+library("esquisse")
+```
 ## Part c
 How can you ask for help about the  `esquisse` package for `R`? Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that the help document isn't loaded every time you compile your Quarto document.
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+#| eval: false
+help("esquisse")
+```
 
 ## Part d
 Is a demo or vignette available for the  `esquisse` package for `R`? Report the code below, ensuring to set the `eval` option to `false`, using "\#| eval: false", so that the you don't get errors when you compile your Quarto document.
 
+**Solution** There is no demo or vignette.
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+#| eval: false
+demo("esquisse")
+vignette("esquisse")
+```
+
 ## Part e
-Add the BibTeX citation for `esquisse` package for `R` to your `.bib` file and cite it in a sentence describing what the package does below. Note you can reference a citation named `esquisse` using "[@\hspace{-0em}esquisse]".
+Add the BibTeX citation for `esquisse` package for `R` to your `.bib` file and cite it in a sentence describing what the package does below. Note you can reference a citation named @esquisse using "[@\hspace{-0em}esquisse]".
 <!-- Note the \hspace{-0em} above is for printing 
 the command instead of actually citing. -->
+
+**Solution**  is a super cool package that I will learn to love 
 
 ## Part f
 Run `esquisser()` in your console -- not in a chunk of `R` code in your Quarto document. 
@@ -169,3 +204,5 @@ ii. Create a vector containing each `Treatment` repeated for each participant ID
 
 ## Part d
 Create a vector containing the `character` "MATH" and the `numeric` 240. What is the resulting class? Explain why in a sentence.
+
+
