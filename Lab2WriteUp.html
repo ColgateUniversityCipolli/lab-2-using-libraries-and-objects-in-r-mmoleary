@@ -278,9 +278,10 @@ the command instead of actually citing. --></p>
 <h2 data-number="2.1" class="anchored" data-anchor-id="part-a-1"><span class="header-section-number">2.1</span> Part a</h2>
 <p>The Fibonacci Sequence is a recursive formula: <span class="math display">\[F_n = F_{n-1} + F_{n-2}\]</span> where <span class="math inline">\(F_0=0\)</span> and <span class="math inline">\(F_1=1\)</span>.</p>
 <p>Create a vector of the first 10 Fibonacci numbers.</p>
+<p><strong>Solution</strong> I used a manual formula because there are few repeating terms and the difference between terms is not uniform.</p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(Fibonacci.Sequence <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(<span class="at">Fibonacci.Sequence =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
 </div>
@@ -291,19 +292,65 @@ the command instead of actually citing. --></p>
 <h2 data-number="2.2" class="anchored" data-anchor-id="part-b-1"><span class="header-section-number">2.2</span> Part b</h2>
 <p>Triangular Numbers are the cumulative sums of natural numbers: <span class="math display">\[F_n = \frac{n(n+1)}{2}.\]</span></p>
 <p>Create a vector of the first 10 Triangular Numbers.</p>
+<p><strong>Solution</strong> I used a manual formula because again, there were no repeating terms and the difference between terms increased by one with every new term.</p>
+<p></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(<span class="at">Triangular.Numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
+</div>
+</div>
+<p></p>
 </section>
 <section id="part-c-1" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="part-c-1"><span class="header-section-number">2.3</span> Part c</h2>
-<p>Suppose I were designing a repeated meausres experiment with three treatment conditions. Each of <span class="math inline">\(n=10\)</span> participants (with <code>ID</code> 1 to 10) will receive <em>all</em> experimental conditions, call them “Control”, “Treatment A”, and “Treatment B”.</p>
+<p>Suppose I were designing a repeated measures experiment with three treatment conditions. Each of <span class="math inline">\(n=10\)</span> participants (with <code>ID</code> 1 to 10) will receive <em>all</em> experimental conditions, call them “Control”, “Treatment A”, and “Treatment B”.</p>
 <p>Consider setting up data entry for this experiment.</p>
 <ol type="i">
 <li>Create a vector containing each <code>ID</code> repeated three times, once for each treatment.</li>
+</ol>
+<p></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(<span class="at">ID =</span> <span class="fu">rep</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">1</span>), <span class="at">each=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  1  1  2  2  2  3  3  3  4  4  4  5  5  5  6  6  6  7  7  7  8  8  8  9
+[26]  9  9 10 10 10</code></pre>
+</div>
+</div>
+<p></p>
+<ol start="2" type="i">
 <li>Create a vector containing each <code>Treatment</code> repeated for each participant ID.</li>
 </ol>
+<p></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>(<span class="at">Treatment =</span> <span class="fu">c</span>(<span class="st">"treatment.a"</span>, <span class="st">"treatment.b"</span>, <span class="st">"control"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "treatment.a" "treatment.b" "control"    </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">rep</span>(Treatment, <span class="at">times=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "treatment.a" "treatment.b" "control"     "treatment.a" "treatment.b"
+ [6] "control"     "treatment.a" "treatment.b" "control"     "treatment.a"
+[11] "treatment.b" "control"     "treatment.a" "treatment.b" "control"    
+[16] "treatment.a" "treatment.b" "control"     "treatment.a" "treatment.b"
+[21] "control"     "treatment.a" "treatment.b" "control"     "treatment.a"
+[26] "treatment.b" "control"     "treatment.a" "treatment.b" "control"    </code></pre>
+</div>
+</div>
+<p></p>
 </section>
 <section id="part-d-1" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="part-d-1"><span class="header-section-number">2.4</span> Part d</h2>
 <p>Create a vector containing the <code>character</code> “MATH” and the <code>numeric</code> 240. What is the resulting class? Explain why in a sentence.</p>
+<p><strong>Solution</strong> The resulting class is a character. Vectors are atomic, thus they can only work with one data type. The integar became a character because it can easily be conveyed as such, while a character is much more difficult to convey as a number.</p>
+<p></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a> (<span class="at">part.d =</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "MATH" "240" </code></pre>
+</div>
+</div>
+<p></p>
 
 </section>
 </section>

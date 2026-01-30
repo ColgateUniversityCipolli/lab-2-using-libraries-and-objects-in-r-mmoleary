@@ -191,10 +191,11 @@ where $F_0=0$ and $F_1=1$.
 
 Create a vector of the first 10 Fibonacci numbers.
 
+**Solution** I used a manual formula because there are few repeating terms and the difference between terms is not uniform.
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
-(Fibonacci.Sequence <- c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
+(Fibonacci.Sequence = c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
 ```
 
 ## Part b
@@ -203,15 +204,41 @@ $$F_n = \frac{n(n+1)}{2}.$$
 
 Create a vector of the first 10 Triangular Numbers. 
 
+**Solution** I used a manual formula because again, there were no repeating terms and the difference between terms increased by one with every new term.
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(Triangular.Numbers = c(1, 3, 6, 10, 15, 21, 28, 36, 45, 55))
+```
+
 ## Part c
-Suppose I were designing a repeated meausres experiment with three treatment conditions. Each of $n=10$ participants (with `ID` 1 to 10) will receive *all* experimental conditions, call them "Control", "Treatment A", and "Treatment B". 
+Suppose I were designing a repeated measures experiment with three treatment conditions. Each of $n=10$ participants (with `ID` 1 to 10) will receive *all* experimental conditions, call them "Control", "Treatment A", and "Treatment B". 
 
 Consider setting up data entry for this experiment.
 
 i. Create a vector containing each `ID` repeated three times, once for each treatment.
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(ID = rep(seq(from=1, to=10, by=1), each=3))
+```
+
 ii. Create a vector containing each `Treatment` repeated for each participant ID.
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(Treatment = c("treatment.a", "treatment.b", "control"))
+rep(Treatment, times=10)
+```
 
 ## Part d
 Create a vector containing the `character` "MATH" and the `numeric` 240. What is the resulting class? Explain why in a sentence.
 
-
+**Solution** The resulting class is a character. Vectors are atomic, thus they can only work with one data type. The integar became a character because it can easily be conveyed as such, while a character is much more difficult to convey as a number.
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+ (part.d = c("MATH", 240))
+```
