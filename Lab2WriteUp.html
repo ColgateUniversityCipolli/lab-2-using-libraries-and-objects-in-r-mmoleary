@@ -211,7 +211,7 @@ the command instead of actually citing. --></p>
 <li>Drag <code>body_mass_g</code> to the X box and <code>species</code> to the fill box.</li>
 <li>Describe what you see in words. What can you conclude about Adelie, Chinstrap, and Gentoo penguins based on the resulting plot?</li>
 </ol>
-<p><strong>Solution</strong> There is a histogram that shows all three population’s data. There appears to be a greater amount of data collected for the Adelle population. Each population’s data is relatively symmetric and a general peak. The Adelle population has a more steep peak, while the Chinstrap and Gentoo populations are more moderately sloped. The Adelle and Chinstrap populations’ body mass appear very similar, indicating that these populations have very similar masses. Alternatively, the Gentoo population is heavier on average.</p>
+<p><strong>Solution</strong> There is a histogram that shows all three population’s data. There appears to be a greater amount of data collected for the Adelle population. Each population’s data is relatively symmetric with a general peak. The Adelle population has a more steep peak, while the Chinstrap and Gentoo populations are more moderately sloped. The Adelle and Chinstrap populations’ body mass appear to have similar centers and ranges, indicating that these populations have very similar masses, while the Gentoo population is heavier on average.</p>
 </section>
 </section>
 <section id="objects-and-vectors" class="level1" data-number="2">
@@ -282,7 +282,7 @@ the command instead of actually citing. --></p>
 <p><strong>Solution</strong> I used a manual formula because there are few repeating terms and the difference between terms is not uniform.</p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(<span class="at">Fibonacci.Sequence =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(<span class="at">Fibonacci.Sequence =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>)) <span class="co"># using the manual function was necessary without clear repitions and uniform changes. Because the Fibonacci Sequence is expressed as a recursive formula, terms are determined by past    terms, not a similar (or no) change in value.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
 </div>
@@ -296,7 +296,7 @@ the command instead of actually citing. --></p>
 <p><strong>Solution</strong> I used a manual formula because again, there were no repeating terms and the difference between terms increased by one with every new term.</p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(<span class="at">Triangular.Numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>(<span class="at">Triangular.Numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">21</span>, <span class="dv">28</span>, <span class="dv">36</span>, <span class="dv">45</span>, <span class="dv">55</span>)) <span class="co"># this formula is difficult to create as a sequential vector because terms are based on their order within the sequence, not some change as they increase. There are also no repeats to be expressed as a repeating vector.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
 </div>
@@ -310,9 +310,10 @@ the command instead of actually citing. --></p>
 <ol type="i">
 <li>Create a vector containing each <code>ID</code> repeated three times, once for each treatment.</li>
 </ol>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(<span class="at">ID =</span> <span class="fu">rep</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">1</span>), <span class="at">each=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(<span class="at">ID =</span> <span class="fu">rep</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">1</span>), <span class="at">each=</span><span class="dv">3</span>)) <span class="co"># a sequential vector is ideal for the inside as it assigns participants numbers one through ten. Making it a repeating vector on the outside creates three different groups. I used "each" because it is organized into groups based on the patient number rather than organizing the patients based on treatment.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  1  1  2  2  2  3  3  3  4  4  4  5  5  5  6  6  6  7  7  7  8  8  8  9
 [26]  9  9 10 10 10</code></pre>
@@ -322,10 +323,11 @@ the command instead of actually citing. --></p>
 <ol start="2" type="i">
 <li>Create a vector containing each <code>Treatment</code> repeated for each participant ID.</li>
 </ol>
+<p><strong>Solution</strong></p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>Treatment <span class="ot">=</span> <span class="fu">rep</span>((<span class="at">treatment =</span> <span class="fu">c</span>(<span class="st">"treatment.a"</span>, <span class="st">"treatment.b"</span>, <span class="st">"control"</span>)), <span class="at">times=</span><span class="dv">10</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">factor</span>(Treatment) <span class="co"># I made the vector into a factor vector because the information is categorical, and this is preferable if I were to do future manipulations.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>Treatment <span class="ot">=</span> <span class="fu">rep</span>((<span class="at">treatment =</span> <span class="fu">c</span>(<span class="st">"treatment.a"</span>, <span class="st">"treatment.b"</span>, <span class="st">"control"</span>)), <span class="at">times=</span><span class="dv">10</span>) <span class="co"># I manually entered the characters in for the data to be repeated, and then I used a repeating vector to quickly create all the treatments for each of the participants. I decided to use times because it properly aligns with the patient IDs.</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">factor</span>(Treatment) <span class="co"># I made the vector into a factor vector because the information is categorical, and this is preferable if I were to do future manipulations, and it also clearly demonstrates the levels of treatment.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] treatment.a treatment.b control     treatment.a treatment.b control    
  [7] treatment.a treatment.b control     treatment.a treatment.b control    
@@ -343,7 +345,7 @@ Levels: control treatment.a treatment.b</code></pre>
 <p><strong>Solution</strong> The resulting class is a character. Vectors are atomic, thus they can only work with one data type. The integar became a character because it can easily be conveyed as such, while a character is much more difficult to convey as a number.</p>
 <p></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a> (<span class="at">part.d =</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a> (<span class="at">part.d =</span> <span class="fu">c</span>(<span class="st">"MATH"</span>, <span class="dv">240</span>)) <span class="co"># this is a vector with two different types of data.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "MATH" "240" </code></pre>
 </div>

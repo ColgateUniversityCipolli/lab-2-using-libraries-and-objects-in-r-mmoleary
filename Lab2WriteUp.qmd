@@ -196,7 +196,7 @@ Create a vector of the first 10 Fibonacci numbers.
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
-(Fibonacci.Sequence = c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
+(Fibonacci.Sequence = c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34)) # using the manual function was necessary without clear repitions and uniform changes. Because the Fibonacci Sequence is expressed as a recursive formula, terms are determined by past    terms, not a similar (or no) change in value.
 ```
 
 ## Part b
@@ -209,7 +209,7 @@ Create a vector of the first 10 Triangular Numbers.
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
-(Triangular.Numbers = c(1, 3, 6, 10, 15, 21, 28, 36, 45, 55))
+(Triangular.Numbers = c(1, 3, 6, 10, 15, 21, 28, 36, 45, 55)) # this formula is difficult to create as a sequential vector because terms are based on their order within the sequence, not some change as they increase. There are also no repeats to be expressed as a repeating vector.
 ```
 
 ## Part c
@@ -219,19 +219,21 @@ Consider setting up data entry for this experiment.
 
 i. Create a vector containing each `ID` repeated three times, once for each treatment.
 
+**Solution**
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
-(ID = rep(seq(from=1, to=10, by=1), each=3))
+(ID = rep(seq(from=1, to=10, by=1), each=3)) # a sequential vector is ideal for the inside as it assigns participants numbers one through ten. Making it a repeating vector on the outside creates three different groups. I used "each" because it is organized into groups based on the patient number rather than organizing the patients based on treatment.
 ```
 
 ii. Create a vector containing each `Treatment` repeated for each participant ID.
 
+**Solution**
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
-Treatment = rep((treatment = c("treatment.a", "treatment.b", "control")), times=10)
-factor(Treatment) # I made the vector into a factor vector because the information is categorical, and this is preferable if I were to do future manipulations.
+Treatment = rep((treatment = c("treatment.a", "treatment.b", "control")), times=10) # I manually entered the characters in for the data to be repeated, and then I used a repeating vector to quickly create all the treatments for each of the participants. I decided to use times because it properly aligns with the patient IDs.
+factor(Treatment) # I made the vector into a factor vector because the information is categorical, and this is preferable if I were to do future manipulations, and it also clearly demonstrates the levels of treatment.
 ```
 
 ## Part d
@@ -241,5 +243,5 @@ Create a vector containing the `character` "MATH" and the `numeric` 240. What is
 ```{r}
 #| size: "scriptsize"
 #| code-fold: FALSE
- (part.d = c("MATH", 240))
+ (part.d = c("MATH", 240)) # this is a vector with two different types of data.
 ```
