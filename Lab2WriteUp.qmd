@@ -136,7 +136,7 @@ i. Select `palmerpenguins` from the "Select an environment in which to search:" 
 ii. Drag `body_mass_g` to the X box and `species` to the fill box. 
 iii. Describe what you see in words. What can you conclude about Adelie, Chinstrap, and Gentoo penguins based on the resulting plot? 
 
-**Solution** There is a histogram that shows all three population's data. There appears to be a greater amount of data collected for the Adelle population. Each population's data is relatively symmetric with a general peak. The Adelle population has a more steep peak, while the Chinstrap and Gentoo populations are more moderately sloped. The Adelle and Chinstrap populations' body mass appear to have similar centers and ranges, indicating that these populations have very similar masses, while the Gentoo population is heavier on average.
+**Solution** Using the data from the palmerpenguins package [@palmerpenguins], the histogram that shows all three population's data. There appears to be a greater amount of data collected for the Adelle population. Each population's data is relatively symmetric with a general peak. The Adelle population has a more steep peak, while the Chinstrap and Gentoo populations are more moderately sloped. The Adelle and Chinstrap populations' body mass appear to have similar centers and ranges, indicating that these populations have very similar masses, while the Gentoo population is heavier on average.
 
 # Objects and Vectors
 Create the following vectors in `R`. In some cases, you may be able to use `seq()` or `rep()` while in others you cannot. Use these functions when possible, otherwise manually create the vector and explain why that was necessary.
